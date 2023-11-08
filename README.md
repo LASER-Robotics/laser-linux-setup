@@ -41,7 +41,7 @@ cd /tmp
 echo "mkdir -p ~/git
 cd ~/git
 sudo apt-get -y install git
-git clone https://github.com/klaxalk/linux-setup.git
+git clone https://github.com/Augusto-Viniciuss/linux-setup.git
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
 ```
