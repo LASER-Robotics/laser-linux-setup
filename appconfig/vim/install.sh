@@ -21,9 +21,9 @@ do
   fi
 done
 
-var1="18.04"
-var2=`lsb_release -r | awk '{ print $2 }'`
-[ "$var2" = "$var1" ] && export BEAVER=1
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "18.04" ] && export BEAVER=1
+[ "$var" = "22.04" ] && export JAMMY=1
 
 default=y
 while true; do
@@ -85,7 +85,12 @@ while true; do
     # updated new plugins and clean old plugins
     /usr/bin/vim -E -c "let g:user_mode=1" -c "so $APP_PATH/dotvimrc" -c "PlugInstall" -c "wqa" || echo "It normally returns >0"
 
-    default=y
+    if [ -n "$JAMMY" ]; then
+      default=n
+    else
+      default=y
+    fi
+
     while true; do
       if [[ "$unattended" == "1" ]]
       then

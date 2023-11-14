@@ -35,15 +35,12 @@ let g:startify_custom_header_quotes = [
 \ ]
 
 let g:ascii = [
-\ '      o',
-\ '        o       _=,_',
-\ '          o  o_/6 /#\',
-\ '             \__ |##/',
-\ '                |--\',
-\ '                /   #--.',
-\ '                \#|_   _#-. /',
-\ '                 |/ \_( # |" ',
-\ '                C/ ,--___/',
+\'　　　   /)─―ヘ',
+\'　　 ＿／　　  ＼',
+\'　 ／　　 ●　　●丶',
+\'　｜　　　　　▼　|',
+\'　｜　　　　　亠ノ',
+\'　 U￣U￣￣U￣U⠀',
 \]
 
 let g:startify_custom_header = startify#fortune#boxed() + g:ascii

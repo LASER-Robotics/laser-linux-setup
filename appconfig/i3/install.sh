@@ -135,7 +135,12 @@ while true; do
     sudo apt-get -y install lxappearance
 
     # indicator-sound-switcher
-    sudo apt-get -y install libappindicator3-dev gir1.2-keybinder-3.0
+    if [ -n "$JAMMY" ]; then
+      sudo apt-get -y install libayatana-appindicator3-dev gir1.2-keybinder-3.0
+    else
+      sudo apt-get -y install libappindicator3-dev gir1.2-keybinder-3.0
+    fi
+    
     cd $APP_PATH/../../submodules/indicator-sound-switcher
     sudo python3 setup.py install
 
