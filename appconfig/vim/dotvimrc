@@ -119,8 +119,8 @@ if g:user_mode == "1"
   " youcompleteme
   " automatic code completion for C++ and more
   " EPIGEN_DEL_BLOCK_VIKTOR_BIGBOX {
-  Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clangd-completer' }
-  Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+  "Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clangd-completer' }
+  "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
   " enable airline YCM status
   let g:airline#extensions#ycm#enabled = 1
   " EPIGEN_DEL_BLOCK_VIKTOR_BIGBOX }
