@@ -2,7 +2,7 @@
 
 | Ubuntu               | Architecture | Status                                                                                                                                                           |
 | -------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 22.04 JAMMY          | AMD64        | [![Build Status](https://github.com/Augusto-Viniciuss/linux-setup/workflows/Jammy/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions)          |
+| 22.04 Jammy          | AMD64        | [![Build Status](https://github.com/Augusto-Viniciuss/linux-setup/workflows/Jammy/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions)          |
 | 20.04 Focal          | AMD64        | [![Build Status](https://github.com/Augusto-Viniciuss/linux-setup/workflows/Focal/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions)          |
 
 ## Summary
