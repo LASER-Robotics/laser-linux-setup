@@ -21,6 +21,9 @@ do
   fi
 done
 
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "22.04" ] && export JAMMY=1
+
 default=y
 while true; do
   if [[ "$unattended" == "1" ]]
@@ -33,6 +36,12 @@ while true; do
 
   if [[ $response =~ ^(y|Y)=$ ]]
   then
+  
+    if [ -n "$JAMMY" ]; then
+      sudo apt-get -y install libunwind-dev
+    else
+      sudo apt-get -y install libgstreamer1.0-dev
+    fi
 
     # install prerequisities
     sudo apt-get -y install cmake valac libgee-0.8-dev libpoppler-glib-dev \

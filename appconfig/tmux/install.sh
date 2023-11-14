@@ -9,11 +9,8 @@ trap 'echo "$0: \"${last_command}\" command failed with exit code $?"' ERR
 APP_PATH=`dirname "$0"`
 APP_PATH=`( cd "$APP_PATH" && pwd )`
 
-var1="18.04"
-var2=`lsb_release -r | awk '{ print $2 }'`
-if [ "$var2" = "$var1" ]; then
-  export BEAVER=1
-fi
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "22.04" ] && export JAMMY=1
 
 unattended=0
 subinstall_params=""
@@ -44,7 +41,10 @@ while true; do
 
     sudo apt-get -y install tmux
 
-    # sudo apt-get -y install libevent-dev
+    #if [ ! -n "$JAMMY" ]
+    #then
+      #sudo apt-get -y install libevent-dev
+    #fi
 
     # #{ for bad times when dependencies break
 

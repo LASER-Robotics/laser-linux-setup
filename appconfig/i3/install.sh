@@ -20,9 +20,9 @@ do
   fi
 done
 
-var1="18.04"
-var2=`lsb_release -r | awk '{ print $2 }'`
-[ "$var2" = "$var1" ] && export BEAVER=1
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "18.04" ] && export BEAVER=1
+[ "$var" = "22.04" ] && export JAMMY=1
 
 default=y
 while true; do
@@ -58,6 +58,11 @@ while true; do
       echo "Waiting for Enter..."
       echo ""
       read
+    fi
+    
+    if [ -n "$JAMMY" ]; then
+      sudo apt install g++-9 gcc-9
+      sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 40 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
     fi
 
     sudo apt-get -y install lightdm

@@ -21,9 +21,8 @@ do
   fi
 done
 
-var1="18.04"
-var2=`lsb_release -r | awk '{ print $2 }'`
-[ "$var2" = "$var1" ] && export BEAVER=1
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "22.04" ] && export JAMMY=1
 
 default=y
 while true; do
@@ -38,7 +37,10 @@ while true; do
   if [[ $response =~ ^(y|Y)=$ ]]
   then
 
-    sudo add-apt-repository -y ppa:linuxuprising/shutter
+    if [ ! -n "$JAMMY" ]; then
+      sudo add-apt-repository -y ppa:linuxuprising/shutter
+    fi
+
     sudo apt-get update
 
     sudo apt-get -y install shutter

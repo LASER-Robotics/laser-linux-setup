@@ -21,6 +21,9 @@ do
   fi
 done
 
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "22.04" ] && export JAMMY=1
+
 default=n
 while true; do
   if [[ "$unattended" == "1" ]]
@@ -33,6 +36,11 @@ while true; do
 
   if [[ $response =~ ^(y|Y)=$ ]]
   then
+  
+    if [ -n "$JAMMY" ]; then
+      sudo add-apt-repository ppa:ubuntuhandbook1/apps
+      sudo apt update
+    fi
 
     # for video, photo, audio, ..., viewing and editing
     sudo apt-get -y install gimp vlc ffmpeg audacity rawtherapee hugin pavucontrol
