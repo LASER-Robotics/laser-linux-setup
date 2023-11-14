@@ -2,15 +2,15 @@
 
 | Ubuntu               | Architecture | Status                                                                                                                                                           |
 | -------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 20.04 Focal          | AMD64        | [![Build Status](https://github.com/klaxalk/linux-setup/workflows/Focal/badge.svg)](https://github.com/klaxalk/linux-setup/actions)                              |
-| 20.04 Focal          | arm64        |                                                                                                                                                                  |
+| 22.04 Jammy          | AMD64        | [![Jammy](https://github.com/Augusto-Viniciuss/linux-setup/actions/workflows/jammy.yml/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions/workflows/jammy.yml)          |
+| 20.04 Focal          | AMD64        | [![Focal](https://github.com/Augusto-Viniciuss/linux-setup/actions/workflows/focal.yml/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions/workflows/focal.yml)          |
 
 ## Summary
 
-This repo contains settings of klaxalk's Linux work environment.
+This repo contains settings of Augusto's Linux work environment.
 
 It could be summarized as follows:
-* **Ubuntu 20.04**
+* **Ubuntu 22.04**
 * **i3** (i3gaps) tiling window manager with i3bar and vim-like controls
   * **i3-layout-manager** for saving and loading window layouts
 * **urxvt** terminal emulator with ability to show images (when using the *ranger* file manager)
@@ -47,14 +47,15 @@ cd linux-setup
 ```
 **Calling install.sh repeatedly** will not cause acumulation of code in your .bashrc, so feel free to update your configuration by rerunning it.
 
-# How to? -> [wiki](https://github.com/klaxalk/linux-setup/wiki)
+# How to? -> [wiki](https://github.com/Klaxalk/linux-setup/wiki)
 
-Refer to the project's [wiki](https://github.com/klaxalk/linux-setup/wiki) (work in progress).
+Refer to the project's [wiki](https://github.com/Klaxalk/linux-setup/wiki) (work in progress).
 
 # Credits
 
 I thank the following sources for inspiration:
 
+* Tomáš Báča (Klaxalk), https://github.com/klaxalk
 * All guys behind [thoughtbot](https://www.youtube.com/user/ThoughtbotVideo) and namely following presenters:
   * Mike Coutermarsh, https://www.youtube.com/watch?v=_NUO4JEtkDw
   * Chris Toomey, https://www.youtube.com/watch?v=wlR5gYd6um0
