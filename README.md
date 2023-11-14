@@ -55,6 +55,7 @@ Refer to the project's [wiki](https://github.com/Klaxalk/linux-setup/wiki) (work
 
 I thank the following sources for inspiration:
 
+* Tomáš Báča (Klaxalk), https://github.com/klaxalk
 * All guys behind [thoughtbot](https://www.youtube.com/user/ThoughtbotVideo) and namely following presenters:
   * Mike Coutermarsh, https://www.youtube.com/watch?v=_NUO4JEtkDw
   * Chris Toomey, https://www.youtube.com/watch?v=wlR5gYd6um0
