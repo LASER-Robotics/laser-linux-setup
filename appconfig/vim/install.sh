@@ -83,7 +83,11 @@ while true; do
     ln -fs $APP_PATH/dotvim ~/.vim
 
     # updated new plugins and clean old plugins
-    /usr/bin/vim -E -c "let g:user_mode=1" -c "so $APP_PATH/dotvimrc" -c "PlugInstall" -c "wqa" || echo "It normally returns >0"
+    if [ -n "$JAMMY" ]; then
+      /usr/bin/vim -E -c "let g:user_mode=1" -c "so $APP_PATH/dotvim22rc" -c "PlugInstall" -c "wqa" || echo "It normally returns >0"
+    else
+      /usr/bin/vim -E -c "let g:user_mode=1" -c "so $APP_PATH/dotvimrc" -c "PlugInstall" -c "wqa" || echo "It normally returns >0"
+    fi
 
     if [ -n "$JAMMY" ]; then
       default=n

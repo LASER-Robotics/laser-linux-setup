@@ -119,8 +119,8 @@ if g:user_mode == "1"
   " youcompleteme
   " automatic code completion for C++ and more
   " EPIGEN_DEL_BLOCK_VIKTOR_BIGBOX {
-  Plug 'ycm-core/YouCompleteMe', { 'commit': '7c4d053', 'do': './install.py --clangd-completer' }
-  Plug 'rdnetto/YCM-Generator', { 'commit': '9cb722a' }
+  "Plug 'ycm-core/YouCompleteMe', {'do': './install.py --clangd-completer' }
+  "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
   " enable airline YCM status
   let g:airline#extensions#ycm#enabled = 1
   " EPIGEN_DEL_BLOCK_VIKTOR_BIGBOX }
@@ -244,7 +244,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'ardagnir/united-front'
 
 " snippet completion
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
 " powerful targeting of text parts
@@ -515,7 +515,7 @@ set wildignore+=*/Downloads/**,*/Desktop/**,*/build/**
 " set path for filename suggestions
 " ** means "in any subfolder"
 set path+=~/git/**
-set path+=~/.vim/UltiSnips/**
+"set path+=~/.vim/UltiSnips/**
 
 " set jk in insert mode as ESC
 " EPIGEN_ADD_BLOCK_TOMAS EPIGEN_ADD_BLOCK_VIT {
@@ -617,7 +617,7 @@ autocmd BufWritePost *.sk AsyncRun bash -c '%:p:h/compile_sketch.sh %:t'
 source ~/.vim/pluginconfig/vim-multiple-cursors.vim
 
 " config for UltiSnips
-source ~/.vim/pluginconfig/ultisnips.vim
+"source ~/.vim/pluginconfig/ultisnips.vim
 
 " config for vim-commentary
 source ~/.vim/pluginconfig/vim-commentary.vim
@@ -625,7 +625,7 @@ source ~/.vim/pluginconfig/vim-commentary.vim
 " additional settings only for athame
 if g:user_mode == "0"
 
-  nnoremap <leader>u Ivim ~/.vim/UltiSnips/athame.snippets
+  "nnoremap <leader>u Ivim ~/.vim/UltiSnips/athame.snippets
   nnoremap <leader>ww Ivim ~/git/notes/index.md
 
   nnoremap OA $a<up>
