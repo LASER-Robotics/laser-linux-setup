@@ -2,15 +2,15 @@
 
 | Ubuntu               | Architecture | Status                                                                                                                                                           |
 | -------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 20.04 Focal          | AMD64        | [![Build Status](https://github.com/klaxalk/linux-setup/workflows/Focal/badge.svg)](https://github.com/klaxalk/linux-setup/actions)                              |
-| 20.04 Focal          | arm64        |                                                                                                                                                                  |
+| 22.04 JAMMY          | AMD64        | [![Build Status](https://github.com/Augusto-Viniciuss/linux-setup/workflows/Jammy/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions)          |
+| 20.04 Focal          | AMD64        | [![Build Status](https://github.com/Augusto-Viniciuss/linux-setup/workflows/Focal/badge.svg)](https://github.com/Augusto-Viniciuss/linux-setup/actions)          |
 
 ## Summary
 
-This repo contains settings of klaxalk's Linux work environment.
+This repo contains settings of Augusto's Linux work environment.
 
 It could be summarized as follows:
-* **Ubuntu 20.04**
+* **Ubuntu 22.04**
 * **i3** (i3gaps) tiling window manager with i3bar and vim-like controls
   * **i3-layout-manager** for saving and loading window layouts
 * **urxvt** terminal emulator with ability to show images (when using the *ranger* file manager)
@@ -47,9 +47,9 @@ cd linux-setup
 ```
 **Calling install.sh repeatedly** will not cause acumulation of code in your .bashrc, so feel free to update your configuration by rerunning it.
 
-# How to? -> [wiki](https://github.com/klaxalk/linux-setup/wiki)
+# How to? -> [wiki](https://github.com/Klaxalk/linux-setup/wiki)
 
-Refer to the project's [wiki](https://github.com/klaxalk/linux-setup/wiki) (work in progress).
+Refer to the project's [wiki](https://github.com/Klaxalk/linux-setup/wiki) (work in progress).
 
 # Credits
 
