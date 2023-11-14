@@ -21,6 +21,9 @@ do
   fi
 done
 
+var=`lsb_release -r | awk '{ print $2 }'`
+[ "$var" = "22.04" ] && export JAMMY=1
+
 default=y
 while true; do
   if [[ "$unattended" == "1" ]]
@@ -40,7 +43,12 @@ while true; do
     cd $APP_PATH/../../submodules/tmuxinator
 
     gem build tmuxinator.gemspec
-    sudo gem install tmuxinator
+
+    if [ -n "$JAMMY" ]; then
+      sudo gem install tmuxinator -v 3.0.1
+    else
+      sudo gem install tmuxinator
+    fi
 
     # symlink tmuxinator settings
     [ ! -e ~/.tmuxinator ] && ln -fs $APP_PATH/dottmuxinator ~/.tmuxinator
