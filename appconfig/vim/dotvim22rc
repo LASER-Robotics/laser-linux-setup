@@ -698,15 +698,9 @@ if g:user_mode == "1"
 
 endif
 
-" nnoremap <leader>oi :delmark a
-" :norm ma*:%s//_&/g
-" :norm `a:delmark a
-" nnoremap <leader>oo :delmark a
-" :norm ma*:%s//_&_/g
-" :norm `a:delmark a
-" nnoremap <leader>op :delmark a
-" :norm ma*:%s//&_/g
-" :norm `a:delmark a
+nnoremap <leader>oi :delmark a:norm ma*:%s//_&/g:norm `a:delmark a
+nnoremap <leader>oo :delmark a:norm ma*:%s//_&_/g:norm `a:delmark a
+nnoremap <leader>op :delmark a:norm ma*:%s//&_/g:norm `a:delmark a
 
 " Custom config
 if !empty(glob("~/.my.vimrc"))
