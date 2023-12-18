@@ -42,8 +42,11 @@ echo "mkdir -p ~/git
 cd ~/git
 sudo apt-get -y install git
 git clone https://github.com/LASER-Robotics/linux-setup.git
+git@github.com:LASER-Robotics/linux-setup-extras.git
 cd linux-setup
 ./install.sh" > run.sh && source run.sh
+cd ~/git/linux-setup-extras
+../install.sh" > run.sh && source run.sh
 ```
 **Calling install.sh repeatedly** will not cause acumulation of code in your .bashrc, so feel free to update your configuration by rerunning it.
 
