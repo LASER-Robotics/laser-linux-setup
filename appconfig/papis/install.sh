@@ -40,7 +40,7 @@ while true; do
 
     sudo make install
     sudo pip3 install --upgrade whoosh
-    pip install habanero==1.2.3 && pip install PyYAML==5.4.1
+    sudo pip install habanero==1.2.3 PyYAML==5.4.1
 
     # clean up after the compilation
     make clean
