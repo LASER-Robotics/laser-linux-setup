@@ -47,7 +47,6 @@ sudo apt-get -y install git tig cmake cmake-curses-gui build-essential automake 
 
 # python
 sudo apt-get -y install python2.7-dev python3-dev python-setuptools python3-setuptools python3-pip
-pip install PyYAML==5.4.1
 
 if [ -n "$BEAVER" ]; then
   sudo apt-get -y install python-git
