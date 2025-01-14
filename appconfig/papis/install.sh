@@ -40,7 +40,6 @@ while true; do
 
     sudo make install
     sudo pip3 install --upgrade whoosh
-    pip install PyYAML==5.4.1
 
     # clean up after the compilation
     make clean
