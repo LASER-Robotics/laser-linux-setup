@@ -72,7 +72,7 @@ while true; do
 
     cd /tmp
     [ -e xcb-util-xrm ] && rm -rf /tmp/xcb-util-xrm
-    git clone https://github.com/Airblader/xcb-util-xrm
+    git clone https://github.com/Augusto-Viniciuss/xcb-util-xrm
     cd xcb-util-xrm
     git submodule update --init
     ./autogen.sh --prefix=/usr
